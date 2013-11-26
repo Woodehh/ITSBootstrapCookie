@@ -16,7 +16,10 @@
 						dissmissSlideTimeout: 0,
 						btnAcceptClass: 'btn-success',
 						btnDeclineClass: 'btn-danger',
-						defaultCookieLifetime: 300,
+						defaultCookieLifetime: 365,
+						reloadOnAccept: true,
+						onAccept: function(){},
+						onDecline: function(){}
                 }, options);
                 
                 
@@ -75,12 +78,27 @@
 							//set new cookie to be accepted
 							$.cookie("ibc", "true", { expires: defaults.defaultCookieLifetime, path: "/"});
 							
-							//reload location
-							location.reload();
+							//if a function for onAccept is set, throw the function
+							if ( $.isFunction( defaults.onAccept ) ) {
+						        defaults.onAccept.call( this );
+						    }
+							
+							if (defaults.reloadOnAccept){
+								location.reload();								
+							}
+							
+							
+
 						} else if ($(this).hasClass('ibc-decline')) {
 							//remove any previous cookies
 							$.removeCookie("ibc");
 							$.cookie("ibc", "false", { expires: defaults.defaultCookieLifetime, path: "/" });
+
+							//if a function for onDecline is set, throw the function
+							if ( $.isFunction( defaults.onDecline ) ) {
+						        defaults.onDecline.call( this );
+						    }
+
 						}
 					
 						setTimeout(function(){
@@ -113,6 +131,16 @@
 				//check wether the user has accepted cookies
 	            $.userAcceptedCookies = function () {
 					if ($.cookie("ibc") == "true") {
+						return true;
+					} else {
+						//if anything else, he didnt accept or did not click OK yet.
+						return false;						
+					}
+	            }
+	            
+				//check wether the user has accepted cookies
+	            $.userDeclinedCookies = function () {
+					if ($.cookie("ibc") == "false") {
 						return true;
 					} else {
 						//if anything else, he didnt accept or did not click OK yet.

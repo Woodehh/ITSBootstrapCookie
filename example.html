@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>ITS-Boostrap Cookie plugin test</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
@@ -24,23 +24,9 @@
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+	
+	<link href="assets/css/bs.itsbootstrapcookie.min.css" rel="stylesheet">
     
-    <style type="text/css">
-    	#itsbootstrapcookie {
-	    	height: 100px;
-	    	background-color: #5A5A5A;	    	
-	    	position: fixed;
-	    	z-index: 9999;
-	    	width: 100%;
-	    	top: 0;
-			padding: 15px;
-	    	height: auto;
-	    	color: white;
-	    	display: none;
-    	}
-    	
-	    
-    </style>
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -139,71 +125,19 @@
 
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading"></h2>
+	      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
@@ -219,22 +153,58 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/holder/2.0/holder.js"></script>
-
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
-    <script src="bs.itsbootstrapcookie.js"></script>
+    <script src="assets/js/bs.itsbootstrapcookie.js"></script>
 	<script type="text/javascript">
-		
+	
 		$('body').ITSBootstrapCookie({
-			textMessage: "dikke snikkel"
+			//the big text that's displayed
+			textMessage: 'This site uses cookies to help you get a better user experience. We do not store personal stuff.',
+			//the text on the accept button
+			buttonAccept: "Accept Cookies",
+			//the accept button class
+			btnAcceptClass: 'btn-success',
+			//the text on the decline button
+			buttonDecline:"Decline Cookies",
+			//the decline button class
+			btnDeclineClass: 'btn-danger',
+			//How long the slide down will take
+			openSlideTime: 500,
+			//How long it takes to start sliding after document.ready
+			openSlideTimeout: 500,
+			//How long the slide up will take
+			dissmissSlideTime: 500,
+			//How long it takes to start sliding after dissmiss click
+			dissmissSlideTimeout: 0,
+			//The cookie lifetime for the tracking time.
+			defaultCookieLifetime: 365,
+			//if the page should be reloaded when cookies are accepted
+			reloadOnAccept: true,
+			//the onAccept handler
+			onAccept: function(){
+				location.reload()
+			},
+			//onDecline handler
+			onDecline: function(){
+				location.reload()
+			}
+			
 	    });
 
-	    if ($.userAcceptedCookies() == "true") {
-		    alert("You accepted cookies, hurray!");
-	    } else {
-		    alert("Sadly, you can't have a proper experience...");
-		    
-	    }
+        $(document).ready(function(){
+		    if ($.userAcceptedCookies()) {
+			    $(".featurette-heading").html("You accepted cookies, hurray!");
+		    } else {
+			    if ($.userDeclinedCookies()) {
+				    $(".featurette-heading").html('You declined da cookies. User experience: It\'s Goneeee...');
+			    } else {
+				    $(".featurette-heading").html('Please accept da cookies!');
+			    }
+		    }
+        });
+
 	    
 	</script>
+	
   </body>
 </html>
